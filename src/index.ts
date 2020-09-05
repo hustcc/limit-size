@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 import chalk from 'chalk';
 import program from 'commander';
 import { parseConfig } from './config';
@@ -5,7 +7,7 @@ import { lint } from './lint';
 import { logResust } from './log';
 
 program
-  .version('0.1.0', '-v, --version')
+  .version('0.1.1', '-v, --version')
   .usage('<lint-md> [options]')
   .description('limit size for your files.')
   .option('-c, --config [configure-file]', 'default .limit-size.json')
