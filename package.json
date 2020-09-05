@@ -1,0 +1,70 @@
+{
+  "name": "limit-size",
+  "version": "0.1.0",
+  "description": "Lightweight, Convenient, Fast command tool to control your file size, size-limit is too bloated.",
+  "license": "MIT",
+  "bin": {
+    "limit-size": "bin/index.js"
+  },
+  "files": [
+    "bin"
+  ],
+  "scripts": {
+    "lint-staged": "lint-staged",
+    "size": "node ./bin/index.js",
+    "test": "jest",
+    "build": "rimraf ./bin && tsc --module commonjs --outDir bin",
+    "prepublishOnly": "npm run build"
+  },
+  "dependencies": {
+    "chalk": "^4.1.0",
+    "commander": "^6.1.0"
+  },
+  "keywords": [
+    "limit-size",
+    "size-limit"
+  ],
+  "devDependencies": {
+    "@commitlint/cli": "^8.2.0",
+    "@types/jest": "^26.0.13",
+    "@types/node": "^14.6.4",
+    "husky": "^3.0.5",
+    "jest": "^26.4.2",
+    "lint-staged": "^9.3.0",
+    "prettier": "^1.18.2",
+    "rimraf": "^3.0.2",
+    "ts-jest": "^26.3.0",
+    "typescript": "^3.9.7"
+  },
+  "jest": {
+    "preset": "ts-jest",
+    "collectCoverage": true,
+    "testRegex": "(/__tests__/.*\\.(test|spec))\\.ts$",
+    "collectCoverageFrom": [
+      "src/**/*.ts"
+    ]
+  },
+  "lint-staged": {
+    "*.{ts,tsx}": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint-staged",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "limit-size": [
+    {
+      "path": "./src/index.ts",
+      "limit": "400 b",
+      "gzip": true
+    },
+    {
+      "path": "./src/index.ts",
+      "limit": "0.9 Kb"
+    }
+  ]
+}
