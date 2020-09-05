@@ -30,7 +30,6 @@
     "@types/node": "^14.6.4",
     "husky": "^3.0.5",
     "jest": "^26.4.2",
-    "limit-size": "^0.1.0",
     "lint-staged": "^9.3.0",
     "prettier": "^1.18.2",
     "rimraf": "^3.0.2",

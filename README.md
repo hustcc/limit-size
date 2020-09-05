@@ -52,11 +52,11 @@ $ npm install
 # run test cases
 $ npm run test
 
-# run size local
-$ npm run size
-
 # build package
 $ npm run build
+
+# run size local
+$ npm run size
 ```
 
 
