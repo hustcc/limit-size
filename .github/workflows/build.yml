@@ -22,8 +22,3 @@ jobs:
           npm install
           npm run build
           npm run test
-      - name: coverall
-        if: success()
-        uses: coverallsapp/github-action@master
-        with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}

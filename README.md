@@ -4,7 +4,6 @@
 
 [![npm Version](https://img.shields.io/npm/v/limit-size.svg)](https://www.npmjs.com/package/limit-size)
 [![Build Status](https://github.com/hustcc/limit-size/workflows/build/badge.svg)](https://github.com/hustcc/limit-size/actions)
-[![Coverage Status](https://coveralls.io/repos/github/hustcc/limit-size/badge.svg?branch=master)](https://coveralls.io/github/hustcc/limit-size?branch=master)
 [![npm License](https://img.shields.io/npm/l/limit-size.svg)](https://www.npmjs.com/package/limit-size)
 
 
