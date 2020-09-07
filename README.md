@@ -30,7 +30,7 @@ $ npm i --save-dev limit-size
 +   },
 +   {
 +     "path": "dist/g2plot.min.js",
-+     "limit": "500 Kb",
++     "limit": "200 Kb",
 +     "gzip": true
 +   }
 + ],
