@@ -1,6 +1,6 @@
-import { Config, SingleConfig, Result } from './types';
-import { fileSize } from './file-size';
-import { parseSizeString } from './parse-size';
+import { Config, Result } from './types';
+import { fileSize } from './size';
+import { parse } from './bytes';
 
 /**
  * 做检查，并返回检查结果
@@ -11,7 +11,7 @@ export async function lint(config: Config): Promise<Result> {
   for (const c of config) {
     const { path, limit, gzip } = c;
     const bytes = await fileSize(path, gzip);
-    const limitBytes = parseSizeString(limit);
+    const limitBytes = parse(limit);
 
     result.push({
       config: c,

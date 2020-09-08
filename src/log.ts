@@ -1,6 +1,6 @@
 import chalk from 'chalk';
 import { Result, SingleResult } from './types';
-import { formatSize } from './parse-size';
+import { format } from './bytes';
 /**
  
 dist/g2plot.min.js
@@ -23,14 +23,14 @@ export function logResust(result: Result) {
       '\n',
       ...(passed
         ? []
-        : ['  ', chalk.red(`Package size limit has exceeded by ${chalk.bold(formatSize(bytes - limitBytes))}`), '\n']),
+        : ['  ', chalk.red(`Package size limit has exceeded by ${chalk.bold(format(bytes - limitBytes))}`), '\n']),
       '  ',
       'Size limit:  ',
       passed ? chalk.bold.green(limit) : chalk.bold.red(limit),
       '\n',
       '  ',
       'Size:        ',
-      passed ? chalk.bold.green(formatSize(bytes)) : chalk.bold.red(formatSize(bytes)),
+      passed ? chalk.bold.green(format(bytes)) : chalk.bold.red(format(bytes)),
       '\n',
     ];
 

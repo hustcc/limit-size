@@ -8,7 +8,7 @@ function unitToRate(unit: string) {
  * 解析 size string
  * @param sizeString
  */
-export function parseSizeString(sizeString: string): number {
+export function parse(sizeString: string): number {
   const match = sizeString.match(/^(\d*\.*\d*)\s*([gGkKmM]{0,1}[bB]{0,1})$/);
   if (!match) {
     throw new Error(`file size string '${sizeString}' syntax error, e.g. 100 b, 1.2 Kb, 2 Mb, 20.5 Gb!`);
@@ -25,7 +25,7 @@ export function parseSizeString(sizeString: string): number {
  * @param bytes
  * @param fixed
  */
-export function formatSize(bytes: number, fixed = 1): string {
+export function format(bytes: number, fixed = 1): string {
   bytes = Math.abs(bytes);
 
   const { radix, unit } = JEDEC;
