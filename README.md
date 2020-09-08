@@ -4,6 +4,7 @@
 
 [![npm Version](https://img.shields.io/npm/v/limit-size.svg)](https://www.npmjs.com/package/limit-size)
 [![Build Status](https://github.com/hustcc/limit-size/workflows/build/badge.svg)](https://github.com/hustcc/limit-size/actions)
+[![npm](https://img.shields.io/npm/dm/limit-size.svg)](https://www.npmjs.com/package/limit-size)
 [![npm License](https://img.shields.io/npm/l/limit-size.svg)](https://www.npmjs.com/package/limit-size)
 
 
