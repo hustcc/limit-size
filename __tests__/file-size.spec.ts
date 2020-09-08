@@ -1,8 +1,8 @@
-import { fileSize } from '../src/file-size';
+import { fileSize } from '../src/size';
 
 describe('file-size', () => {
   test('fileSize', async () => {
-    expect(await fileSize('./src/index.ts', false)).toBeGreaterThan(await fileSize('./src/index.ts', true));
+    expect(await fileSize('./src/cmd.ts', false)).toBeGreaterThan(await fileSize('./src/cmd.ts', true));
 
     // expect(async () => {
     //   await fileSize('not-exist.ts', false)
