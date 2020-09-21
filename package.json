@@ -1,6 +1,6 @@
 {
   "name": "limit-size",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Lightweight, Convenient, Fast command tool to control your file size, size-limit is too bloated.",
   "license": "MIT",
   "bin": {
