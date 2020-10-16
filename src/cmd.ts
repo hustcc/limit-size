@@ -5,7 +5,7 @@ import { lint } from './lint';
 import { logResust } from './log';
 
 program
-  .version('0.1.3', '-v, --version')
+  .version('0.1.4', '-v, --version')
   .usage('<limit-size> [options]')
   .description('limit size for your files.')
   .option('-c, --config [configure-file]', 'default .limit-size.json')

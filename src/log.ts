@@ -6,17 +6,19 @@ import { format } from './bytes';
 dist/g2plot.min.js
   Size limit:   700 KB
   Size:         305.15 KB 
+  Gzip:         Yes 
 
 dist/g2plot.min.js
   Package size limit has exceeded by 105.15 KB
   Size limit:   200 KB
   Size:         305.15 KB
+  Gzip:         No 
 
  */
 export function logResust(result: Result) {
   result.forEach((r: SingleResult) => {
     const { config, passed, bytes, limitBytes } = r;
-    const { path, limit } = config;
+    const { path, limit, gzip } = config;
 
     const logs = [
       chalk.bold(path),
@@ -31,6 +33,10 @@ export function logResust(result: Result) {
       '  ',
       'Size:        ',
       passed ? chalk.bold.green(format(bytes)) : chalk.bold.red(format(bytes)),
+      '\n',
+      '  ',
+      'Gzip:        ',
+      gzip ? chalk.bold('Yes') : chalk.bold('No'),
       '\n',
     ];
 
