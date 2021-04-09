@@ -15,7 +15,7 @@ dist/g2plot.min.js
   Gzip:         No 
 
  */
-export function logResust(result: Result) {
+export function logResult(result: Result) {
   result.forEach((r: SingleResult) => {
     const { config, passed, bytes, limitBytes } = r;
     const { path, limit, gzip } = config;
