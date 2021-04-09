@@ -2,7 +2,7 @@ import chalk from 'chalk';
 import program from 'commander';
 import { parseConfig } from './config';
 import { lint } from './lint';
-import { logResust } from './log';
+import { logResult } from './log';
 
 program
   .version('0.1.4', '-v, --version')
@@ -15,7 +15,7 @@ program
     // 2. lint size limit
     const result = await lint(config);
     // 3. log
-    logResust(result);
+    logResult(result);
     // 4. help doc
     const success = result.every((r) => r.passed);
     if (!success) {
